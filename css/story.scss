@@ -1,0 +1,112 @@
+.story-message {
+  white-space: nowrap;
+  font-size: 50px;
+  line-height: 3em;
+}
+
+.story-comic {
+
+  img {
+    max-width: 900px;
+    max-height: 700px;
+    min-height: 600px;
+  }
+
+  div {
+    position: absolute;
+    writing-mode: tb;
+    font-weight: bold;
+  }
+
+  .story-comic-text-1-1 {
+    top: 55px;
+    right: 65px;
+    height: 200px;
+    line-height: 1.4em;
+    font-size: 18px;
+  }
+
+  .story-comic-text-2-1 {
+    top: 240px;
+    right: 253px;
+  }
+
+  .story-comic-text-2-2 {
+    top: 75px;
+    right: 310px;
+  }
+
+  .story-comic-text-2-3 {
+    top: 70px;
+    right: 545px;
+    height: 90px;
+    font-size: 22px;
+  }
+
+  .story-comic-text-2-4 {
+    top: 93px;
+    right: 643px;
+  }
+
+  .story-comic-text-2-5 {
+    top: 328px;
+    right: 609px;
+    height: 60px;
+    line-height: 1.2em;
+  }
+
+  .story-comic-text-2-6 {
+    top: 402px;
+    right: 257px;
+    height: 70px;
+    font-size: 14px;
+    line-height: 1.4em;
+  }
+
+  .story-comic-text-2-7 {
+    top: 520px;
+    right: 415px;
+    font-size: 14px;
+    height: 60px;
+    line-height: 1.2em;
+  }
+
+  .story-comic-text-2-8 {
+    top: 643px;
+    right: 412px;
+  }
+
+  .story-comic-text-2-9 {
+    top: 404px;
+    right: 461px;
+    height: 100px;
+    line-height: 1.1em;
+  }
+
+  .story-comic-text-2-10 {
+    top: 525px;
+    right: 639px;
+    font-size: 12px;
+    line-height: 1.3em;
+    height: 75px;
+  }
+
+  .story-comic-text-2-11 {
+    top: 616px;
+    right: 625px;
+    height: 110px;
+    line-height: 1.4em;
+  }
+
+  .story-comic-text-3-1 {
+    top: 40px;
+    right: 25px;
+    font-size: 36px;
+  }
+
+  .story-comic-text-3-2 {
+    top: 65px;
+    right: 640px;
+    font-size: 16px;
+  }
+}

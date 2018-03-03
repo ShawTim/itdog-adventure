@@ -1,0 +1,68 @@
+.vex-overlay {
+  animation: initial !important;
+  background: initial !important;
+}
+
+@keyframes closeBtn {
+  0% { transform: translate(0, 5px); }
+  50% { transform: translate(0, -5px); }
+  100% { transform: translate(0, 5px); }
+}
+
+.vex-close {
+  top: unset !important;
+  bottom: 80px !important;
+
+  &::before {
+    content: "▼" !important;
+    cursor: initial !important;
+    animation: closeBtn 1s infinite;
+  }
+}
+
+.overlay {
+  animation: vex-fadein 0.5s;
+  position: fixed;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@keyframes fading {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.vex {
+  padding: 0px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .vex-content {
+    width: 950px !important;
+    text-align: center;
+
+    .story-message {
+      div {
+        animation: fading 1s linear 1 forwards;
+        opacity: 0;
+      }
+
+      .story-message-line2 {
+        animation-delay: 1s;
+      }
+
+      .story-message-line3 {
+        animation-delay: 2s;
+      }
+    }
+
+    .story-comic {
+      animation: fading 1s linear 1 forwards;
+    }
+  }
+}
