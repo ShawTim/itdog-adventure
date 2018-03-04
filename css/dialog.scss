@@ -5,8 +5,7 @@
 
 @keyframes closeBtn {
   0% { transform: translate(0, 5px); }
-  50% { transform: translate(0, -5px); }
-  100% { transform: translate(0, 5px); }
+  100% { transform: translate(0, -5px); }
 }
 
 .vex-close {
@@ -16,7 +15,7 @@
   &::before {
     content: "▼" !important;
     cursor: initial !important;
-    animation: closeBtn 1s infinite;
+    animation: closeBtn 0.5s infinite alternate;
   }
 }
 

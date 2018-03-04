@@ -1,11 +1,9 @@
 import Dialog from "./dialog";
+import Welcome from "./welcome";
 import stories from "./story";
 
-
-const startStory = () => {
-  Dialog.story(stories);
-}
-
 document.addEventListener("DOMContentLoaded", (e) => {
-  startStory();
+  Dialog.story(stories).then(() => {
+    Welcome.render(document.getElementById("welcome-container"));
+  });
 });

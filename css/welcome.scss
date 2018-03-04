@@ -1,0 +1,106 @@
+#welcome-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.welcome-corner {
+  background: url(../images/angry.png) no-repeat;
+  background-size: contain;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  z-index: 10;
+
+  @keyframes welcome-top-left-corner {
+    0% { transform: rotate(20deg) translate(0, 0); }
+    100% { transform: rotate(20deg) translate(30vw, 0) }
+  }
+
+  @keyframes welcome-top-right-corner {
+    0% { transform: scaleX(-1) rotate(20deg) translate(0, 0); }
+    100% { transform: scaleX(-1) rotate(20deg) translate(30vw, 0) }
+  }
+
+  @keyframes welcome-bottom-left-corner {
+    0% { transform: rotate(-20deg) translate(0, 0); }
+    100% { transform: rotate(-20deg) translate(30vw, 0) }
+  }
+
+  @keyframes welcome-bottom-right-corner {
+    0% { transform: scaleX(-1) rotate(-20deg) translate(0, 0); }
+    100% { transform: scaleX(-1) rotate(-20deg) translate(30vw, 0) }
+  }
+
+  &.welcome-corner-top-left {
+    top: 0;
+    left: -20vw;
+    animation: welcome-top-left-corner 0.1s linear forwards;
+  }
+
+  &.welcome-corner-top-right {
+    top: 0;
+    right: -20vw;
+    transform: scaleX(-1);
+    animation: welcome-top-right-corner 0.1s linear forwards;
+    animation-delay: 0.1s;
+  }
+
+  &.welcome-corner-bottom-left {
+    bottom: 0;
+    left: -20vw;
+    animation: welcome-bottom-left-corner 0.1s linear forwards;
+    animation-delay: 0.2s;
+  }
+
+  &.welcome-corner-bottom-right {
+    bottom: 0;
+    right: -20vw;
+    transform: scaleX(-1);
+    animation: welcome-bottom-right-corner 0.1s linear forwards;
+    animation-delay: 0.3s;
+  }
+}
+
+@keyframes welcome-center-before {
+  0% { transform: scale(1); }
+  100% { transform: scale(0); }
+}
+
+@keyframes welcome-center-after {
+  0% { transform: scale(0); opacity: 1; }
+  70% { transform: scale(0.9); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.welcome-center {
+  position: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &.welcome-center-before {
+    width: 40%;
+    height: 40%;
+    background-image: url(../images/itdog01.png);
+    animation: welcome-center-before 2s linear forwards;
+    animation-delay: 1s;
+  }
+
+  &.welcome-center-after {
+    width: 80%;
+    height: 80%;
+    background-image: url(../images/itdog03.png);
+    animation: welcome-center-after 0.5s linear forwards;
+    animation-delay: 3s;
+    opacity: 0;
+  }
+}

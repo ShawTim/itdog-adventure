@@ -1,3 +1,5 @@
+import '../css/dialog.scss';
+
 import vex from "vex-js";
 import vexDialog from "vex-dialog";
 import _ from "lodash";
@@ -40,18 +42,23 @@ const close = (dialog) => {
 };
 
 const story = (stories) => {
-  let index = 0;
-  let dialog;
-  const options = {};
-  options.afterClose = () => {
-    if (++index < stories.length) {
-      dialog = open(stories[index].join(""), options);
-    } else {
-      close(dialog);
-    }
-  };
+  const dfd = new Promise((resolve) => {
+    let index = 0;
+    let dialog;
+    const options = {};
+    options.afterClose = () => {
+      if (++index < stories.length) {
+        dialog = open(stories[index].join(""), options);
+      } else {
+        close(dialog);
+        resolve();
+      }
+    };
 
-  dialog = open(stories[index].join(""), options);
+    dialog = open(stories[index].join(""), options);
+  });
+
+  return dfd;
 };
 
 const Dialog = {

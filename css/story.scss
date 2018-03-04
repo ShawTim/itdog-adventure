@@ -12,101 +12,287 @@
     min-height: 600px;
   }
 
-  div {
+  .story-comic-text {
     position: absolute;
     writing-mode: tb;
     font-weight: bold;
   }
 
-  .story-comic-text-1-1 {
-    top: 55px;
-    right: 65px;
-    height: 200px;
-    line-height: 1.4em;
-    font-size: 18px;
+  .story-comic-emoji {
+    position: absolute;
+  }
+  
+  &.story-comic-1 {
+
+    @keyframes story-comic-1 {
+      0% { transform: scale(0, 0); }
+      70% { transform: scale(1.3, 1.3); }
+      100% { transform: scale(1, 1); }
+    }
+
+    .story-comic-emoji {
+      font-size: 40px;
+      transform: scale(0, 0);
+      animation: story-comic-1 0.3s linear forwards;
+    }
+
+    .story-comic-img-1 {
+      background: url(../images/story01.png) no-repeat center;
+      background-size: auto 600px;
+      height: 600px;
+    }
+ 
+    .story-comic-text-1-1 {
+      top: 55px;
+      right: 65px;
+      height: 200px;
+      line-height: 1.4em;
+      font-size: 18px;
+    }
+
+    .story-comic-emoji-1-1 {
+      top: 320px;
+      right: 537px;
+      animation-delay: 1s;
+    }
+
+    .story-comic-emoji-1-2 {
+      top: 410px;
+      right: 160px;
+      animation-delay: 1.2s;
+    }
+
+    .story-comic-emoji-1-3 {
+      top: 340px;
+      right: 700px;
+      animation-delay: 1.4s;
+    }
+
+    .story-comic-emoji-1-4 {
+      top: 375px;
+      right: 245px;
+      animation-delay: 1.6s;
+    }
+
+    .story-comic-emoji-1-5 {
+      top: 420px;
+      right: 680px;
+      animation-delay: 1.8s;
+    }
   }
 
-  .story-comic-text-2-1 {
-    top: 240px;
-    right: 253px;
+  &.story-comic-2 {
+
+    @keyframes story-comic-2 {
+      0% { transform: rotate(45deg) scale(0.7, 0.35); }
+      100% { transform: rotate(45deg) scale(1.3, 0.65); }
+    }
+
+    .story-comic-img-2 {
+      background: url(../images/story02.jpg) no-repeat center;
+      background-size: auto 700px;
+      height: 700px;
+    }
+
+    .story-comic-text-2-1 {
+      top: 240px;
+      right: 253px;
+    }
+
+    .story-comic-text-2-2 {
+      top: 75px;
+      right: 310px;
+    }
+
+    .story-comic-text-2-3 {
+      top: 70px;
+      right: 545px;
+      height: 90px;
+      font-size: 22px;
+    }
+
+    .story-comic-text-2-4 {
+      top: 93px;
+      right: 643px;
+    }
+
+    .story-comic-text-2-5 {
+      top: 328px;
+      right: 609px;
+      height: 60px;
+      line-height: 1.2em;
+    }
+
+    .story-comic-text-2-6 {
+      top: 402px;
+      right: 257px;
+      height: 70px;
+      font-size: 14px;
+      line-height: 1.4em;
+    }
+
+    .story-comic-text-2-7 {
+      top: 520px;
+      right: 415px;
+      font-size: 14px;
+      height: 60px;
+      line-height: 1.2em;
+    }
+
+    .story-comic-text-2-8 {
+      top: 643px;
+      right: 412px;
+    }
+
+    .story-comic-text-2-9 {
+      top: 404px;
+      right: 461px;
+      height: 100px;
+      line-height: 1.1em;
+    }
+
+    .story-comic-text-2-10 {
+      top: 525px;
+      right: 639px;
+      font-size: 12px;
+      line-height: 1.3em;
+      height: 75px;
+    }
+
+    .story-comic-text-2-11 {
+      top: 616px;
+      right: 625px;
+      height: 110px;
+      line-height: 1.4em;
+    }
+
+    .story-comic-emoji-2-1 {
+      top: 547px;
+      right: 575px;
+      color: red;
+      font-size: 20px;
+      animation: story-comic-2 0.5s infinite alternate;
+    }
   }
 
-  .story-comic-text-2-2 {
-    top: 75px;
-    right: 310px;
+  &.story-comic-3 {
+    .story-comic-img-3 {
+      background: url(../images/story03.jpg) no-repeat center;
+      background-size: 900px 600px;
+      width: 900px;
+      height: 600px;
+    }
+ 
+    .story-comic-text-3-1 {
+      top: 40px;
+      right: 25px;
+      font-size: 36px;
+    }
+ 
+    .story-comic-text-3-2 {
+      top: 65px;
+      right: 640px;
+      font-size: 16px;
+    }
+
+    .story-comic-emoji-3-1 {
+      top: 390px;
+      right: 100px;
+      transform: rotate(70deg) scale(0.4, 0.8);
+    }
+  }
+}
+
+.tears {
+  width: 250px;
+  height: 60px;
+  overflow: hidden;
+
+  div:nth-child(1), div:nth-child(3) {
+    height: 20px;
+    background: transparent;
   }
 
-  .story-comic-text-2-3 {
-    top: 70px;
-    right: 545px;
-    height: 90px;
-    font-size: 22px;
+  div:nth-child(2) {
+    height: 20px;
+    background: #e0efe3;
   }
 
-  .story-comic-text-2-4 {
-    top: 93px;
-    right: 643px;
+  @keyframes tear {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(250px, 0); }
   }
 
-  .story-comic-text-2-5 {
-    top: 328px;
-    right: 609px;
-    height: 60px;
-    line-height: 1.2em;
+  &::before,
+  &::after,
+  div:nth-child(1)::before,
+  div:nth-child(1)::after,
+  div:nth-child(2)::before,
+  div:nth-child(2)::after,
+  div:nth-child(3)::before,
+  div:nth-child(3)::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 100%;
+    width: 125px;
+    height: 20px;
+    animation: tear 1s linear infinite;
   }
 
-  .story-comic-text-2-6 {
-    top: 402px;
-    right: 257px;
-    height: 70px;
-    font-size: 14px;
-    line-height: 1.4em;
+  &::before {
+    background-color: #e0efe3;
+    left: -250px;
+    top: 10px;
+    z-index: 10;
   }
 
-  .story-comic-text-2-7 {
-    top: 520px;
-    right: 415px;
-    font-size: 14px;
-    height: 60px;
-    line-height: 1.2em;
+  &::after {
+    background-color: white;
+    left: -250px;
+    top: 30px;
+    z-index: 10;
   }
 
-  .story-comic-text-2-8 {
-    top: 643px;
-    right: 412px;
+  div:nth-child(1)::before {
+    background-color: white;
+    left: -125px;
+    top: 10px;
+    z-index: 20;
   }
 
-  .story-comic-text-2-9 {
-    top: 404px;
-    right: 461px;
-    height: 100px;
-    line-height: 1.1em;
+  div:nth-child(1)::after {
+    background-color: #e0efe3;
+    left: -125px;
+    top: 30px;
+    z-index: 10;
   }
 
-  .story-comic-text-2-10 {
-    top: 525px;
-    right: 639px;
-    font-size: 12px;
-    line-height: 1.3em;
-    height: 75px;
+  div:nth-child(2)::before {
+    background-color: #e0efe3;
+    left: 0px;
+    top: 10px;
+    z-index: 10;
   }
 
-  .story-comic-text-2-11 {
-    top: 616px;
-    right: 625px;
-    height: 110px;
-    line-height: 1.4em;
+  div:nth-child(2)::after {
+    background-color: white;
+    left: 0px;
+    top: 30px;
+    z-index: 20;
   }
 
-  .story-comic-text-3-1 {
-    top: 40px;
-    right: 25px;
-    font-size: 36px;
+  div:nth-child(3)::before {
+    background-color: white;
+    right: 0px;
+    top: 10px;
+    z-index: 20;
   }
 
-  .story-comic-text-3-2 {
-    top: 65px;
-    right: 640px;
-    font-size: 16px;
+  div:nth-child(3)::after {
+    background-color: #e0efe3;
+    right: 0px;
+    top: 30px;
+    z-index: 10;
   }
 }
