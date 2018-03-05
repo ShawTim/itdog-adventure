@@ -2,14 +2,20 @@ import '../css/story.scss';
 
 export default [[
   "<div class='story-message'>",
-    "<div class='story-message-line1'>某日</div>",
-    "<div class='story-message-line2'>打工仔如常上班</div>",
-    "<div class='story-message-line3'>老闆突然召開開發部緊急會議</div>",
+    "<div class='story-message-line1'>Ｘ月Ｘ日</div>",
+    "<div class='story-message-line2'>天陰</div>",
+    "<div class='story-message-line3'>是一個如常上班的日子</div>",
+  "</div>",
+],[
+  "<div class='story-message'>",
+    "<div class='story-message-line1'>這個平常的日子</div>",
+    "<div class='story-message-line2'>卻因為一個公司會議</div>",
+    "<div class='story-message-line3'>為事件拉開了序幕⋯⋯</div>",
   "</div>",
 ],[
   "<div class='story-comic story-comic-1'>",
     "<div class='story-comic-img-1'></div>",
-    "<div class='story-comic-text story-comic-text-1-1'>為節省成本，公司決定炒咗電腦技術支援部門。嚟緊希望各位開發部同事拍硬檔幫幫手喇。都係電腦野啫。</div>",
+    "<div class='story-comic-text story-comic-text-1-1'>為節省成本，公司決定唔再畀錢買電腦技術支援服務。嚟緊希望各位開發部同事拍硬檔幫幫手喇。都係電腦野啫。</div>",
     "<div class='story-comic-emoji story-comic-emoji-1-1'>！</div>",
     "<div class='story-comic-emoji story-comic-emoji-1-2'>！</div>",
     "<div class='story-comic-emoji story-comic-emoji-1-3'>！</div>",
@@ -49,5 +55,10 @@ export default [[
     "<div class='story-comic-text story-comic-text-3-1'>老闆⋯！</div>",
     "<div class='story-comic-text story-comic-text-3-2'>我好想專心寫程式⋯⋯</div>",
     "<div class='story-comic-emoji story-comic-emoji-3-1 tears'><div></div><div></div><div></div></div>",
+  "</div>",
+],[
+  "<div class='story-message'>",
+    "<div class='story-message-line1'>這是一個</div>",
+    "<div class='story-message-line2'>IT狗掙扎求存的故事⋯⋯</div>",
   "</div>",
 ]]

@@ -10,15 +10,46 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
+
+  &.welcome-active::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../images/office-background.jpg);
+    background-position: center;
+    background-size: cover;
+    filter: blur(5px);
+  }
+
+  &.welcome-active::after {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../images/explode.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 1;
+    transform: scale(0);
+    animation: welcome-center-after 0.1s 3s linear forwards;
+  }
 }
 
 .welcome-corner {
-  background: url(../images/angry.png) no-repeat;
-  background-size: contain;
   width: 50%;
   height: 50%;
   position: absolute;
-  z-index: 10;
+  z-index: 20;
 
   @keyframes welcome-top-left-corner {
     0% { transform: rotate(20deg) translate(0, 0); }
@@ -40,33 +71,95 @@
     100% { transform: scaleX(-1) rotate(-20deg) translate(30vw, 0) }
   }
 
+  @keyframes dissolve {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  @keyframes appear {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &::before {
+    background-image: url(../images/angry.png);
+    animation: dissolve 0.01s 3.3s linear forwards;
+  }
+
+  &::after {
+    background-image: url(../images/shine.png);
+    opacity: 0;
+    transform: translate(2vw, -2vh);
+    animation: appear 0.01s 3.3s linear forwards;
+  }
+
   &.welcome-corner-top-left {
     top: 0;
     left: -20vw;
     animation: welcome-top-left-corner 0.1s linear forwards;
+
+    @media (max-width: 1600px) and (min-width: 1024px) {
+      left: -30vw;
+    }
+
+    @media (max-width: 1024px) {
+      left: -40vw;
+    }
   }
 
   &.welcome-corner-top-right {
     top: 0;
     right: -20vw;
     transform: scaleX(-1);
-    animation: welcome-top-right-corner 0.1s linear forwards;
-    animation-delay: 0.1s;
+    animation: welcome-top-right-corner 0.1s 0.1s linear forwards;
+
+    @media (max-width: 1600px) and (min-width: 1024px) {
+      right: -30vw;
+    }
+
+    @media (max-width: 1024px) {
+      right: -40vw;
+    }
   }
 
   &.welcome-corner-bottom-left {
     bottom: 0;
     left: -20vw;
-    animation: welcome-bottom-left-corner 0.1s linear forwards;
-    animation-delay: 0.2s;
+    animation: welcome-bottom-left-corner 0.1s 0.2s linear forwards;
+
+    @media (max-width: 1600px) and (min-width: 1024px) {
+      left: -30vw;
+    }
+
+    @media (max-width: 1024px) {
+      left: -40vw;
+    }
   }
 
   &.welcome-corner-bottom-right {
     bottom: 0;
     right: -20vw;
     transform: scaleX(-1);
-    animation: welcome-bottom-right-corner 0.1s linear forwards;
-    animation-delay: 0.3s;
+    animation: welcome-bottom-right-corner 0.1s 0.3s linear forwards;
+
+    @media (max-width: 1600px) and (min-width: 1024px) {
+      right: -30vw;
+    }
+
+    @media (max-width: 1024px) {
+      right: -40vw;
+    }
   }
 }
 
@@ -86,21 +179,25 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  z-index: 10;
 
   &.welcome-center-before {
     width: 40%;
     height: 40%;
     background-image: url(../images/itdog01.png);
-    animation: welcome-center-before 2s linear forwards;
-    animation-delay: 1s;
+    animation: welcome-center-before 2s 1s linear forwards;
   }
 
   &.welcome-center-after {
     width: 80%;
     height: 80%;
     background-image: url(../images/itdog03.png);
-    animation: welcome-center-after 0.5s linear forwards;
-    animation-delay: 3s;
+    animation: welcome-center-after 0.3s 3s linear forwards;
     opacity: 0;
+
+    @media (max-width: 1024px) {
+      width: 60%;
+      height: 60%;
+    }
   }
 }

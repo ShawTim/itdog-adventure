@@ -8,6 +8,7 @@ const createNodeWithClass = (cls) => {
 
 const Welcome = {
   render: (container) => {
+    container.className += " welcome-active";
     container.appendChild(createNodeWithClass("welcome-corner welcome-corner-top-left"));
     container.appendChild(createNodeWithClass("welcome-corner welcome-corner-top-right"));
     container.appendChild(createNodeWithClass("welcome-corner welcome-corner-bottom-left"));
