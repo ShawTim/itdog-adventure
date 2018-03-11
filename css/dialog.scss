@@ -3,6 +3,11 @@
   background: initial !important;
 }
 
+@keyframes fading {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 @keyframes closeBtn {
   0% { transform: translate(0, 5px); }
   100% { transform: translate(0, -5px); }
@@ -11,6 +16,8 @@
 .vex-close {
   top: unset !important;
   bottom: 80px !important;
+  opacity: 0;
+  animation: fading 0.1s 1s linear forwards;
 
   &::before {
     content: "▼" !important;
@@ -28,11 +35,6 @@
   right: 0;
   bottom: 0;
   left: 0;
-}
-
-@keyframes fading {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
 }
 
 .vex {

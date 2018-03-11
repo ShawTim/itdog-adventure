@@ -1,0 +1,36 @@
+#canvas-container {
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+}
+
+#flappy-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+}
+
+.block {
+  display: block;
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ball {
+  background: black;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  font-size: 40px;
+  font-weight: bold;
+  background: radial-gradient(circle at 30px 30px, #fff, #000);
+}

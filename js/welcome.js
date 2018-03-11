@@ -15,6 +15,7 @@ const Welcome = {
     container.appendChild(createNodeWithClass("welcome-corner welcome-corner-bottom-right"));
     container.appendChild(createNodeWithClass("welcome-center welcome-center-before"));
     container.appendChild(createNodeWithClass("welcome-center welcome-center-after"));
+    container.appendChild(createNodeWithClass("welcome-center welcome-center-background"));
   }
 };
 
