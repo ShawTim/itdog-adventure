@@ -24,6 +24,10 @@
   
   &.story-comic-1 {
 
+    .story-comic-emoji {
+      transform: scale(0, 0);
+    }
+
     .story-comic-img-1 {
       background: url(../images/story01.png) no-repeat center;
       background-size: auto 600px;

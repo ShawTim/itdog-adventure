@@ -39,23 +39,28 @@ export default class Radiation {
   }
 
   lastEvent() {
-    this._eventNode && removeEventNode(this._eventNode);
-    this.focusNode.classList.remove("radiation");
-    this.eventNode.focus();
-    this._resolve && this._resolve();
+    this.contentNode.style.transform = "";
+    this.contentNode.style.transformOrigin = "";
+
+    setTimeout(() => {
+      this.contentNode.classList.add("radiation-last");
+      this._eventNode && removeEventNode(this._eventNode);
+      this.focusNode.classList.remove("radiation");
+      this.eventNode.focus();
+      this._resolve && this._resolve();
+    }, 2000);
   }
 
   next() {
-    if (this._index >= this.scenes.length) {
-      this.contentNode.style.transform = "";
-      this.contentNode.style.transformOrigin = "";
-      this.contentNode.classList.add("radiation-last");
-
+    if (this._index >= this.scenes.length-1) {
       this._eventNode && removeEventNode(this._eventNode);
       this._eventNode = createEventNode();
       this._eventNode.addEventListener("click", this.lastEvent.bind(this));
       this._eventNode.addEventListener("keyup", this.lastEvent.bind(this));
       this._eventNode.focus();
+
+      restartRadiation(this.focusNode);
+      zoom(this.contentNode, this.scenes[this._index]);
     } else {
       restartRadiation(this.focusNode);
       zoom(this.contentNode, this.scenes[this._index]);
